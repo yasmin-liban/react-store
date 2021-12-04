@@ -1,0 +1,32 @@
+/* Overriding Base Styles */
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  body{
+    font-family: 'M PLUS 1', sans-serif;
+    & *{
+      box-sizing: border-box;
+      @apply text-gray-700;
+    }
+  }
+}
+
+
+.main-bg{
+  /* @apply from-red-600 to-violet-900 bg-gradient-to-tr; */
+  @apply grid from-blue-300 to-blue-800 bg-gradient-to-tr;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-areas: 
+    '.'
+    '.'
+    '.';
+}
+
+#brand-name{
+  @apply bg-indigo-500 px-1 text-yellow-200 underline;
+  box-shadow: 10px 6px 0px 0px #223c88;
+}
